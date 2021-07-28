@@ -60,13 +60,12 @@ let parsecount;
 function updateCounter() {
   
   const itemCount = document.getElementById('itemCount')
-  let countcart = localStorage.getItem('cart')
   //  console.log(countcart);
 
-  parsecount = JSON.parse(countcart)
+  parsecount = getCartData()
 
 console.log(parsecount);
-  itemCount.textContent = `Number of items is ${parsecount.length}`
+  itemCount.textContent = ` Number of items is ${parsecount.length}`
   // localStorage.setItem('count', parsecount.length)
 
 }
@@ -81,10 +80,10 @@ function updateCartPreview() {
   // TODO: Add a new element to the cartContents div with that information
   itemscount.appendChild(pelement)
   let quantityarr = [];
-  let countcart = localStorage.getItem('cart');
+  
   //  console.log(countcart);
   let sumarr = 0;
-  parsecount = JSON.parse(countcart)
+  parsecount = getCartData()
   for (let i = 0; i < parsecount.length; i++) {
     quantityarr.push(parsecount[i].quantity)
     sumarr += quantityarr[i]
