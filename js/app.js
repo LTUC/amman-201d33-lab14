@@ -21,6 +21,10 @@ Cart.prototype.saveToLocalStorage = function () {
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  // let index = this.items.indexOf(item);
+  // if(index > -1){
+    this.items.splice(item,1);
+  // }
 };
 
 const CartItem = function(product, quantity) {
@@ -59,4 +63,20 @@ function generateCatalog() {
 }
 
 // Initialize the app by creating the big list of products with images and names
+function listProducts(){
+  let productsList = document.getElementById('cartContents');
+  let ulElement = document.createElement('ul');
+  productsList.appendChild(ulElement);
+  for(let i =0 ; i< Product.allProducts.length ; i++){
+    let olElement = document.createElement('ol')
+    ulElement.appendChild(olElement);
+    olElement.textContent=`${Product.allProducts[i].name}`;
+    let imgElement = document.createElement('img');
+    olElement.appendChild(imgElement);
+    imgElement.src= `${Product.allProducts[i].filePath}`
+  }
+}
+
 generateCatalog();
+listProducts();
+

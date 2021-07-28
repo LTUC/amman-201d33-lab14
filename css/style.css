@@ -1,1 +1,16 @@
 /* TODO: Make it awesome */
+img{
+    width:25%;
+    height: 200px;
+}
+#cartContents div {
+    position: absolute;
+    display: grid;
+    top: 60%;
+    right: 40%;
+}
+h2{
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
