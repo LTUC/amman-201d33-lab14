@@ -24,6 +24,10 @@ function clearCart() {}
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
 
+  let mytable = document.createElement("table");
+  table.appendChild(mytable);
+
+  
   // TODO: Find the table body
 
   // TODO: Iterate over the items in the cart
