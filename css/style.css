@@ -1,1 +1,9 @@
 /* TODO: Make it awesome */
+
+
+
+
+table th tbody tr td {
+    border-width: 3px;
+    border-style:solid ;
+}
