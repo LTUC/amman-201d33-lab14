@@ -1,1 +1,54 @@
 /* TODO: Make it awesome */
+
+
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: aquamarine;
+    /* position: relative; */
+
+
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+}
+
+header h1{
+    text-align: center;
+    color: red;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main{
+    padding: 25px;
+    /* margin: 25px; */
+    height: 500px;
+    background-color: silver;
+    font-size: 22px;
+    font-family: cursive;
+    margin-top: 30px;
+    /* position: absolute; */
+    /* top: 50px; */
+
+}
+
+.deck col-1{
+    width:300px ;
+}
+.card{
+
+    background-color: turquoise;
+    margin-top: 30px;
+}
+
+.copy{
+    background-color: yellowgreen;
+    margin-top: 30px;
+    font-size: larger;
+
+}
