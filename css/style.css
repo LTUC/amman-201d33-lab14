@@ -1,1 +1,25 @@
 /* TODO: Make it awesome */
+
+#submiting{
+
+    background-color: brown;
+
+}
+#submiting:hover{
+    background-color: burlywood;
+}
+
+#items {
+    background-color: rgb(19, 183, 224);
+}
+#items:hover{
+    background-color: crimson;
+}
+option{
+    background-color: rgb(62, 145, 156);
+}
+button{
+    width: 20px;
+    height: 20px;
+    background-color: darkcyan;
+}
