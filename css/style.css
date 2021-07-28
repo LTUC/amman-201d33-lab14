@@ -1,1 +1,82 @@
-/* TODO: Make it awesome */
+ /* TODO: Make it awesome */
+
+table,th,td{
+    border: 1px solid black;
+    border-collapse:collapse ;
+    text-align: center;
+    left: 50%;
+    padding:10px;
+    margin-left: 300px;
+    }
+
+    table{
+        border-collapse: collapse;
+        padding: 50px;
+    }
+   
+#card
+{
+text-align: center;
+
+}
+    nav ul li {
+
+
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        background-color: red;
+        width: 20%;
+        margin-left: 150px;
+        margin-bottom: 50px;
+        margin-top: 15px;
+    }
+
+   h1{
+    background-size:contain;
+    color: white;
+    text-align: center;
+    background-color: gray ;
+    font-size:xx-large
+   }
+   
+   p {
+
+
+    margin-top: 550px;
+   }
+   ul li  {
+
+    text-align: center;
+   }
+
+
+ol   {
+       margin-top: 80px;
+       text-align:center;
+  max-width:500px;
+  padding:40px;	
+  list-style-type: space-counter;
+  position: relative;
+}
+
+
+div {
+    
+        background: palegoldenrod;
+        padding: 5px;
+        margin-left: 35px;
+      
+
+
+}
+legend {
+
+    margin-bottom: 50px;
+}
+
+/* fieldset{
+
+    width: 1200px;
+    text-align: center;
+} */

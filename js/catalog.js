@@ -14,7 +14,6 @@ function populateForm() {
   for (let i in Product.allProducts) {
 
   }
-
 }
 
 // When someone submits the form, we need to add the selected item to the cart
@@ -23,8 +22,13 @@ function populateForm() {
 function handleSubmit(event) {
 
   // TODO: Prevent the page from reloading
-
+  event.preventDefault();
   // Do all the things ...
+
+
+  
+
+
   addSelectedItemToCart();
   cart.saveToLocalStorage();
   updateCounter();
@@ -33,6 +37,7 @@ function handleSubmit(event) {
 }
 
 // TODO: Add the selected item and quantity to the cart
+
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
@@ -49,6 +54,18 @@ function updateCartPreview() {
 }
 
 // Set up the "submit" event listener on the form.
+
+// FormData.addEventListener('submit', clicker)
+
+function clicker(event) {
+
+  event.preventDefault();
+
+
+
+
+  
+}
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
 const catalogForm = document.getElementById('catalog');
