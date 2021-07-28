@@ -4,6 +4,9 @@
 const Cart = function(items) {
   // this.items is an array of CartItem instances.
   this.items = items;
+  this.items.forEach((item, i) => {
+    item.id = i + 1;//here i give each item an id and will use it to delete the seleceted item
+  });
 };
 
 Cart.prototype.addItem = function (product, quantity) {
@@ -21,6 +24,9 @@ Cart.prototype.saveToLocalStorage = function () {
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+   // this.items.pop();
+  this.items.splice(item.id);// is there another way like in 24 
+
 };
 
 const CartItem = function(product, quantity) {
