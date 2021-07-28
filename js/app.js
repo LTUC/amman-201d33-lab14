@@ -20,6 +20,15 @@ Cart.prototype.saveToLocalStorage = function () {
 
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
+  for (let i = 0; i < this.items.length; i++) {
+    if (this.items[i].product === item.product) {
+      this.item.pop(item.product);
+    }
+    else{
+      throw 'prodcut  is not a on the list!';
+    }
+    
+  }
   // Note: You will have to decide what kind of parameter to pass in here!
 };
 

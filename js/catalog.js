@@ -12,7 +12,10 @@ function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('items');
   for (let i in Product.allProducts) {
-
+    let option = document.createElement('option'); 
+    let product = Product.allProducts[i]
+    option.textContent = product.name
+    selectElement.appendChild(option);
   }
 
 }
@@ -23,9 +26,9 @@ function populateForm() {
 function handleSubmit(event) {
 
   // TODO: Prevent the page from reloading
-
+  event.preventDefault();
   // Do all the things ...
-  addSelectedItemToCart();
+  addSelectedItemToCart(event);
   cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
@@ -33,18 +36,36 @@ function handleSubmit(event) {
 }
 
 // TODO: Add the selected item and quantity to the cart
-function addSelectedItemToCart() {
+function addSelectedItemToCart(event) {
   // TODO: suss out the item picked from the select list
+  let item = event.target[1].value;
+  // console.log(item);
   // TODO: get the quantity
+  let quantitty = event.target[2].value;
+  
   // TODO: using those, add one item to the Cart
+  cart.addItem(item, quantitty);
+  // console.log(document.getElementById('quantity').value);
 }
 
-// TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
 
+// TODO: Update the cart count in the header nav with the number of items in the Cart
+function updateCounter() {
+ 
+ let number = cart.items.length;
+  let savedCount = localStorage.setItem('Count' ,number);
+  // console.log(number);
+ 
+}
+
+updateCounter() 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
+  // ! stuck here tried to pass the event from the form but it did not work
+  // how to get the event global scope 
+  let item = event.target[1].value
+  // console.log(item);
   // TODO: Add a new element to the cartContents div with that information
 }
 
