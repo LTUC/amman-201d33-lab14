@@ -11,8 +11,11 @@ function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('items');
-  for (let i in Product.allProducts) {
 
+  for (let i =0 ; i<= Product.allProducts.length;i++) {
+let option= document.createElement('option');
+option.text = (Product.allProducts[i].name);
+selectElement.add(option);
   }
 
 }
@@ -23,6 +26,8 @@ function populateForm() {
 function handleSubmit(event) {
 
   // TODO: Prevent the page from reloading
+  event.preventDefault();
+  
 
   // Do all the things ...
   addSelectedItemToCart();
@@ -33,19 +38,38 @@ function handleSubmit(event) {
 }
 
 // TODO: Add the selected item and quantity to the cart
+console.log(Product.allProducts);
+
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
+  let pickedElement = document.getElementById('items').value;
+  console.log(pickedElement);
+  
   // TODO: get the quantity
+  
+  
+
   // TODO: using those, add one item to the Cart
+
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+  // counter=Cart.items.length-1;
+  // let spanElement=document.getElementById('itemCount');
+  // prelement=document.createElement('pr');
+  // prelement=document.appendChild(spanElement);
+  // prelement=document.textContent(counter);
+  
+
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
+
   // TODO: Add a new element to the cartContents div with that information
+
 }
 
 // Set up the "submit" event listener on the form.
@@ -53,6 +77,7 @@ function updateCartPreview() {
 // Call that handleSubmit method above and kick off the whole process
 const catalogForm = document.getElementById('catalog');
 catalogForm.addEventListener('submit', handleSubmit);
+
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
