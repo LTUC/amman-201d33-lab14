@@ -1,1 +1,14 @@
 /* TODO: Make it awesome */
+table
+{
+    width: 50%;
+    border: 2px solid;
+}
+td, th
+{
+    border: solid;
+}
+td
+{
+    text-align: center;
+}
