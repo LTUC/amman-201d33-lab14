@@ -3,19 +3,21 @@
 
   <head>
     <title>Bus Mall Store</title>
-    <link rel="stylesheet" href="css/reset.css" />
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
+    
   </head>
 
   <body>
 
     <header>
       <h1>Bus Mall Store</h1>
-      <nav>
+      <nav >
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="cart.html">Cart</a><span id="itemCount"></span></li>
         </ul>
+        <p id="cou"></p>
       </nav>
     </header>
 
@@ -48,9 +50,9 @@
                 </label>
                 <label>
                   <span>Quantity</span>
-                  <input id="quantity" type="number" />
+                  <input id="quantity" type="number" name="quantity" />
                 </label>
-                <input type="submit" value="Add To Cart" />
+                <input type="submit" value="Add To Cart"  />
               </fieldset>
             </form>
           </div>
