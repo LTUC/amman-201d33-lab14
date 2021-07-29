@@ -1,7 +1,21 @@
+
+
+
+// * I have used CSS code from SajaAbabneh's Repo.
+// * I also used some JS codes and tried to modify them.
+
+
+
+
 'use strict';
 
+
+
+
+
+
 // Cart constructor.
-const Cart = function(items) {
+let Cart = function(items) {
   // this.items is an array of CartItem instances.
   this.items = items;
 };
@@ -21,15 +35,20 @@ Cart.prototype.saveToLocalStorage = function () {
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  // let data = localStorage.getItem('cart');
+  // let parsedArr=JSON.parse(data);
+  // parsedArr.removeItem('cart');
+  this.items.splice(item, 1);
 };
 
-const CartItem = function(product, quantity) {
+let CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
+  
 };
 
 // Product contructor.
-const Product = function(filePath, name) {
+let Product = function(filePath, name) {
   this.filePath = filePath;
   this.name = name;
   Product.allProducts.push(this);
@@ -60,3 +79,49 @@ function generateCatalog() {
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
+
+
+
+
+// let table2=document.getElementById('cart');
+
+
+// let form = document.getElementById('catalog');
+// form.addEventListener('submit', submitter);
+// function submitter(event){
+//   event.preventDefault();
+
+//   let newItem=event.target.items.value;
+//   let newNum=parseInt(event.target.quantity.value);
+
+//   let addedItems= new Product(newItem,newNum)
+//   table2.textContent="";
+//   addedItems.Cart.addItem();
+//   addedItems.Cart.saveToLocalStorage();
+//   addedItems.Cart.removeItem();
+//   for(let i=o;i<Product.allProducts.length;i++){
+
+//   }
+
+// }
+
+
+
+
+
+// function renderOrders(){
+//   let table3=document.getElementById('cart');
+//   let orderList=document.createElement('ul')
+//   table3.appendChild(orderList);
+//   orderList.textContent='';
+
+//   for(i=0;i<Product.allProducts.length;i++){
+//     let newOrders=document.createElement('li');
+//     orderList.appendChild(newOrders);
+//     newOrders.textContent=`your items is ${newItem} and the quantity for it is ${newNum}`;
+
+//   }
+
+// }
+
+
