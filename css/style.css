@@ -1,1 +1,62 @@
 /* TODO: Make it awesome */
+
+body {
+  padding-top: 80px;
+  margin-right: 5%;
+  margin-left:5% ;
+  background-color: whitesmoke;
+}
+
+header h1{
+width: 100%;
+font-size: 200%;
+margin-top: 2%;
+margin-bottom: 2%;
+text-align: center;
+}
+
+nav{
+    background-color: aqua;
+}
+
+nav ul{
+    display: inline;
+ 
+}
+
+nav ul li{
+
+    display: inline;
+
+}
+
+nav ul li a{
+    padding-left: 20%;
+    font-size: 150%;
+    text-decoration:none ;
+
+}
+.copy{
+font-size: 150%;
+    text-align: left;
+    padding-left: 5%;
+}
+
+ol li {
+    padding-bottom: 2%;
+
+}
+
+.card header h1{
+    float: left;
+
+}
+
+legend{
+    width:8% ;
+    background-color: violet;
+    padding-left: 3%;
+    padding-bottom: 2%;
+    
+    
+}
