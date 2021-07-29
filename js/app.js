@@ -1,5 +1,6 @@
 'use strict';
-
+let items=[];
+ 
 // Cart constructor.
 const Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -21,6 +22,7 @@ Cart.prototype.saveToLocalStorage = function () {
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  localStorage.removeItem 
 };
 
 const CartItem = function(product, quantity) {
@@ -60,3 +62,4 @@ function generateCatalog() {
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
+console.log(Product.allProducts);
