@@ -13,14 +13,35 @@ Cart.prototype.addItem = function (product, quantity) {
 
 };
 
+
 Cart.prototype.saveToLocalStorage = function () {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
   localStorage.setItem('cart',JSON.stringify(this.items))
 };
 
+// abedalraheem 
+
+function getstorageID() {
+  let data=localStorage.getItem('cart');
+  let parsedArr=JSON.parse(data);
+
+
+
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+
+  // abedalraheem 
+
+  let removeer = Cart.quantity
+
+  console.log (removeer,"hi")
+// abedalraheem i saw a similar issue with one student  at stackoverflow so i tried to get the same concepts but it didnt work i guess 
+
+  if (removeer.quantity > 1 ) {
+    quantity=quantity - 1 
+  }
+
 };
 
 const CartItem = function(product, quantity) {
