@@ -5,6 +5,11 @@
 const table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 let cart;
+function removeEventListener(){
+  delete click;
+return removeEventListener;  
+
+}
 
 function loadCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
